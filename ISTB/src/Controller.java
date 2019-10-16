@@ -41,6 +41,7 @@ public class Controller extends HttpServlet {
 			session.setAttribute("cust_id", cust_id);
 			session.setAttribute("bill_type",  bill_type);
 			session.setAttribute("stb_type",  stb_type);
+			System.out.println("type"+session.getAttribute("bill_type").toString());
 
 			if(sp.check(cust_id)) {
 				System.out.println("if block");
