@@ -70,6 +70,8 @@ public class Controller extends HttpServlet {
 					
 					List<String> al1;
 					al1=lg.bill_inventory(session.getAttribute("stb_type").toString(),session.getAttribute("bill_type").toString(),Integer.parseInt(session.getAttribute("cust_id").toString()));
+					session.setAttribute("cust_name", al1.get(0));
+					System.out.println(session.getAttribute("cust_name").toString());
 					request.setAttribute("al1",al1);
 					getServletContext().getRequestDispatcher("/bill.jsp").forward(request, response);
 				} catch (SQLException e) {
