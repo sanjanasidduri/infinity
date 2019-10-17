@@ -21,8 +21,8 @@
     <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" /> 
     <link rel="stylesheet" href="styles/style.css">
-
-</head><div><h1><marquee><strong>Infinity DTH Services</strong></marquee></h1></div>
+	<h3><marquee><strong>Infinity DTH Services</strong></marquee></h3>
+</head>
 <body class="blank">
 <div class="color-line"></div>
 <br><br>
@@ -99,8 +99,8 @@ style="background-color:eeffee"><b>No STB available with this retailer</b></td>
 %>
 </table>
 <FORM NAME="form1" action="Controller" METHOD="GET">
-        <INPUT TYPE="hidden" NAME="buttonName" value="button2">
-        <INPUT TYPE="submit" VALUE="button2">
+        <INPUT TYPE="hidden" NAME="buttonName" value="Next">
+        <INPUT TYPE="submit" VALUE="Next">
         
         <INPUT TYPE="hidden" NAME="buttonName" value="back">
         <INPUT TYPE="submit" VALUE="back">

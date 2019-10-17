@@ -18,17 +18,29 @@
     <link rel="stylesheet" href="vendor/metisMenu/dist/metisMenu.css" />
     <link rel="stylesheet" href="vendor/animate.css/animate.css" />
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet">
 
     <!-- App styles -->
     <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" /> 
     <link rel="stylesheet" href="styles/style.css">
-
-</head><div><marquee><strong>Infinity DTH Services</strong></marquee></div>
+	<h3><marquee><strong>Infinity DTH Services</strong></marquee></h3>
+</head>
+<div>
 <body class="blank">
 <div class="color-line"></div>
-<br><br>
 <body>
-Customer is not assigned a Retailer
+
+	<div id="notfound">
+		<div class="notfound">
+			<div class="notfound-404">
+				<h1>Oops!</h1>
+			</div>
+			<h2>Sorry</h2>
+			<h4>You haven't been assigned a retailer yet. Please contact customer service.</h4>
+			<a href="#">Go To Homepage</a>
+		</div>
+	</div>
+
 </body>
 </html>

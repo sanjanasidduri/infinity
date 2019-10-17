@@ -51,6 +51,7 @@ INSERT INTO customer1 VALUES (2,'Pankaj','Tulaskar','bcd2@gmail.com',111);
 INSERT INTO customer1 VALUES (3,'Saloni','Jain','cef3@gmail.com',112,);
 INSERT INTO customer1 VALUES (4,'Shivani','Reddy','fgh4@gmail.com',113);
 INSERT INTO customer1 VALUES (5,'Sanjana','Sidduri','ijk5@gmail.com',114);
+INSERT INTO customer1 VALUES (6,'Palak','Sidduri','i5@gmail.com','');
 
 select * from customer1;
 

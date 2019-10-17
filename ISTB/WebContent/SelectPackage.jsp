@@ -4,17 +4,17 @@
 String session_val = session.getAttribute("cust_name").toString(); 
 System.out.println("session_val"+session_val);
 %>
-<!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Packages</title>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,100' rel='stylesheet' type='text/css'>
+<link href='styles/style.css' rel='stylesheet' type='text/css'>
 <script type="text/javascript">
 var session_obj= '<%=session_val%>';
 var package_prices = new Array();
 package_prices["package1"]=50;
 package_prices["package2"]=75;
 package_prices["package3"]=59;
+package_prices["package4"]=40;
 
 function getTotalPrice()
 {
@@ -32,109 +32,106 @@ function getTotalPrice()
 }
 
 </script>
-<style>
-#wrap {
-    width: 800px;
-    margin: 0 auto;
-        margin-top: 0px;
-    text-align: left;
-    margin-top: 8px;
-    padding: 5px;
-    background: #fff;
-    font-family: AvenirLTStd, Arial, Helvetica, sans-serif;
-    font-size: 13px;
-    line-height: 16px;
-}
-table { 
-		width:600px; 
-			} 
-th, td { 
-				text-align:left; 
-				padding: 10px; 
-				background-color:none; 
-} 
 
-</style>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Page title -->
+    <title>DTH | Login Page</title>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!--<link rel="shortcut icon" type="image/ico" href="favicon.ico" />-->
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="vendor/metisMenu/dist/metisMenu.css" />
+    <link rel="stylesheet" href="vendor/animate.css/animate.css" />
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
+   <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" /> 
+    <h3><marquee><strong>Infinity DTH Services</strong></marquee></h3>
 </head>
-<body>
-<div id="wrap">
-<form action="c2" id="packages" method="get" >
 
-<fieldset >
-    <legend>Choose your package!  <b><%=session_val%> </b></legend>
-    <table>
-    <tr>
-    <th>
-    <input type="checkbox" name="package" id="package" value="package1"  onclick="getTotalPrice()">   DefaultPackage
-    </th>
-    <th>50
-    </th>
-    </tr>
-    <tr>
-    <td style="text-align:center;">Channel1</td>
-    <td>10</td>
-    </tr>
-    <tr>
-    <td style="text-align:center;">Channel2</td>
-    <td>25</td>
-    </tr>
-    <tr>
-    <td style="text-align:center;">Channel3</td>
-    <td>15</td>
-    </tr>
-    <tr>
-    <th>
-    <input type="checkbox" name="package" id="package" value="package2"  onclick="getTotalPrice()">   Package1
-    </th>
-    <th>75
-    </th>
-    </tr>
-    <tr>
-    <td style="text-align:right;">Channel1</td>
-    <td>25</td>
-    </tr>
-    <tr>
-    <td style="text-align:right;">Channel2</td>
-    <td>25</td>
-    </tr>
-    <tr>
-    <td style="text-align:right;">Channel3</td>
-    <td>25</td>
-    </tr>
-    <tr>
-    <th>
-    <input type="checkbox" name="package" id="package" value="package3"  onclick="getTotalPrice()">   Package2
-    </th>
-    <th>59
-    </th>
-    </tr>
-    <tr>
-    <td style="text-align:right;">Channel1</td>
-    <td>19</td>
-    </tr>
-    <tr>
-    <td style="text-align:right;">Channel2</td>
-    <td>25</td>
-    </tr>
-    <tr>
-    <td style="text-align:right;">Channel3</td>
-    <td>15</td>
-    </tr>
-    <tr>
-    <th>Purchase date</th>
-    <td><p id="date">
-<script> document.write(new Date().toLocaleDateString()); </script>
-</p></td>
-    </tr>
-    <tr>
-    <th>Total Amount</th>
-    <th><div id="totalPrice"></div></th>
-    </tr>
-    </table>
-     <input type="submit" value="Submit">
-   	
-</fieldset>
-</form>
+<body class="blank">
+<div class="color-line"></div>
+<h1>TV Packages</h1>
+<form action="Controller" id="packages" method="get" >
+<div class="price-table-wrapper">
+  <div class="pricing-table">
+    <h2 class="pricing-table__header">- Default Package -</h2>
+    <h3 class="pricing-table__price">$50</h3>
+    <input type="checkbox" name="package" id="package" value="package1"  onclick="getTotalPrice()">
+
+	<a class="pricing-table__button" name="package" id="package" value="package1"  onclick="getTotalPrice()">
+      Channels
+    </a>
+    <ul class="pricing-table__list">
+      <li>TNT</li>
+      <li>HBO</li>
+      <li>AMC</li>
+      <li>FX</li>
+    </ul>
+  </div>
+  <div class="pricing-table featured-table">
+    <h2 class="pricing-table__header">-   Sports & News   -</h2>
+    <h3 class="pricing-table__price">$75</h3>
+    	<input type="checkbox" name="package" id="package" value="package2"  onclick="getTotalPrice()">
+
+	<a class="pricing-table__button" name="package" id="package" value="package2"  onclick="getTotalPrice()">
+      Channels
+    </a>
+    <ul class="pricing-table__list">
+      <li>ESPN</li>
+      <li>SNBC</li>
+      <li>FOX Sports</li>
+      <li>Sky Sports</li>
+    </ul>
+  </div>
+  <div class="pricing-table">
+    <h2 class="pricing-table__header">-   Entertainment   -</h2>
+    <h3 class="pricing-table__price">$59</h3>
+	<input type="checkbox" name="package" id="package" value="package3"  onclick="getTotalPrice()">
+	<a class="pricing-table__button" name="package" id="package" value="package3"  onclick="getTotalPrice()">
+      Channels
+    </a>
+    <ul class="pricing-table__list">
+      <li>HBO+</li>
+      <li>USA Network</li>
+      <li>VH1 HD</li>
+      <li>VOX</li>
+    </ul>
+	</div>
+	
+	<div class="pricing-table">
+    <h2 class="pricing-table__header">-      Kids & Pop     -</h2>
+    <h3 class="pricing-table__price">$40</h3>
+	<input type="checkbox" name="package" id="package" value="package4"  onclick="getTotalPrice()">
+	<a class="pricing-table__button" name="package" id="package" value="package4"  onclick="getTotalPrice()">
+      Channels
+    </a>
+    <ul class="pricing-table__list">
+      <li>Nickelodeon</li>
+      <li>USA</li>
+      <li>TBS</li>
+      <li>Cartoon Network</li>
+    </ul>
+	</div>
 </div>
+
+
+
+<table style="text-align:center;">
+<tr>
+<td>
+<b><h1>Total Price </h1> </b></td><td><h1><div id="totalPrice"></div></h1></td></tr>
+<tr><td>
+<b>Purchase date </b></td><td><script> document.write(new Date().toLocaleDateString()); </script></td></tr>
+</table>
+</form>
+<INPUT TYPE="hidden" NAME="buttonName" value="Submit">
+     <input type="submit" value="Submit">
 </body>
 </html>

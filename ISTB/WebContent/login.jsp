@@ -2,10 +2,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>
-
-
-</script>
 
 
     <meta charset="utf-8">
@@ -28,8 +24,8 @@
     <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" /> 
     <link rel="stylesheet" href="styles/style.css">
-
-</head><div><marquee><strong>Infinity DTH Services</strong></marquee></div>
+	<h3><marquee><strong>Infinity DTH Services</strong></marquee></h3>
+</head>
 <body class="blank">
   
 
@@ -53,7 +49,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="password">Password</label>
-                                <input type="password" title="Please enter your password" placeholder="******" required="" value="" name="password" id="password" class="form-control">
+                                <input type="password" title="Please enter your password" placeholder="******" required="" value="" name="Password" id="password" class="form-control">
                                 <span class="help-block small">Your strong password</span>
                             </div>
                             <div>
@@ -69,8 +65,8 @@
                            
                     
                             
-                        <INPUT TYPE="hidden" NAME="buttonName" value="button3">
-        				<INPUT TYPE="submit" class="btn btn-success btn-block" VALUE="button3">
+                        <INPUT TYPE="hidden" NAME="buttonName" value="Login">
+        				<INPUT TYPE="submit" class="btn btn-success btn-block" VALUE="Login">
                             <a class="btn btn-default btn-block" href="#">Register</a>
                         </form>
                 </div>

@@ -30,7 +30,7 @@ public class Controller extends HttpServlet {
 		
 		String exe=request.getParameter("buttonName");
 		System.out.println(""+exe);
-		if(exe.contentEquals("button1")) {
+		if(exe.contentEquals("Search")) {
 		System.out.println("logic object created");
 		try {
 			inventory_details sp= new inventory_details();
@@ -61,7 +61,7 @@ public class Controller extends HttpServlet {
 	       }
 		
 		       
-		 else if(exe.contentEquals("button2"))
+		 else if(exe.contentEquals("Next"))
 		       {
 				System.out.println("start");
 				
@@ -79,7 +79,7 @@ public class Controller extends HttpServlet {
 					e.printStackTrace();
 				}
 		       }
-		 else if(exe.contentEquals("button3")) {
+		 else if(exe.contentEquals("Login")) {
 			 try {
 					login l1 = new login();
 				    String idd = request.getParameter("Username");
@@ -101,6 +101,15 @@ public class Controller extends HttpServlet {
 						}
 					
 				}
+		
+		 else if(exe.contentEquals("Checkout")) {
+			 System.out.println("im in checkout");
+			 getServletContext().getRequestDispatcher("/SelectPackage.jsp").forward(request, response);
+		 }
+		
+		 else if(exe.contentEquals("Submit")) {
+			 getServletContext().getRequestDispatcher("/ThankYou.jsp").forward(request, response);
+		 }
 //		 else if(exe.contentEquals("Logout")) {
 //			 System.out.println("Im in logout.");
 //			 getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);

@@ -21,28 +21,154 @@
     <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" /> 
     <link rel="stylesheet" href="styles/style.css">
+	<h3><marquee><strong>Infinity DTH Services</strong></marquee></h3>
+</head>
+<style>
+/* Mixins */
+/* bg shortcodes */
+.bg-gradient1 span,
+.bg-gradient1:before {
+  background: #52A0FD;
+  background: linear-gradient(to right, #52A0FD 0%, #00e2fa 80%, #00e2fa 100%);
+}
 
-</head><div><h1><marquee><strong>Infinity DTH Services</strong></marquee></h1></div>
+.bg-gradient2 span,
+.bg-gradient2:before {
+  background: #44ea76;
+  background: linear-gradient(to right, #44ea76 0%, #39fad7 80%, #39fad7 100%);
+}
+
+.bg-gradient3 span,
+.bg-gradient3:before {
+  background: #fa6c9f;
+  background: linear-gradient(to right, #fa6c9f 0%, #ffe140 80%, #ffe140 100%);
+}
+
+/* General */
+.wrapper {
+  margin: 5% auto;
+  text-align: center;
+  -webkit-transform-style: perserve-3d;
+          transform-style: perserve-3d;
+  perspecive: 800px;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover, a:focus, a:active {
+  text-decoration: none;
+}
+
+/* fancy Button */
+.fancy-button {
+  display: inline-block;
+  margin: 30px;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+}
+.fancy-button:before {
+  content: '';
+  display: inline-block;
+  height: 40px;
+  position: absolute;
+  bottom: -5px;
+  left: 30px;
+  right: 30px;
+  z-index: -1;
+  border-radius: 30em;
+  -webkit-filter: blur(20px) brightness(0.95);
+          filter: blur(20px) brightness(0.95);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  transition: all 0.3s ease-out;
+}
+.fancy-button i {
+  margin-top: -1px;
+  margin-right: 20px;
+  font-size: 1.265em;
+  vertical-align: middle;
+}
+.fancy-button span {
+  display: inline-block;
+  padding: 18px 60px;
+  border-radius: 50em;
+  position: relative;
+  z-index: 2;
+  will-change: transform, filter;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  transition: all 0.3s ease-out;
+}
+.fancy-button:focus, .fancy-button:active {
+  color: #ffffff;
+}
+.fancy-button:hover {
+  color: #ffffff;
+}
+.fancy-button:hover span {
+  -webkit-filter: brightness(1.05) contrast(1.05);
+          filter: brightness(1.05) contrast(1.05);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+.fancy-button:hover:before {
+  bottom: 0;
+  -webkit-filter: blur(10px) brightness(0.95);
+          filter: blur(10px) brightness(0.95);
+}
+.fancy-button.pop-onhover:before {
+  opacity: 0;
+  bottom: 10px;
+}
+.fancy-button.pop-onhover:hover:before {
+  bottom: -7px;
+  opacity: 1;
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+}
+.fancy-button.pop-onhover:hover span {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+.fancy-button.pop-onhover:hover:active span {
+  -webkit-filter: brightness(1) contrast(1);
+          filter: brightness(1) contrast(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  transition: all 0.15s ease-out;
+}
+.fancy-button.pop-onhover:hover:active:before {
+  bottom: 0;
+  -webkit-filter: blur(10px) brightness(0.95);
+          filter: blur(10px) brightness(0.95);
+  transition: all 0.2s ease-out;
+}
+</style>
 <body class="blank">
 <div class="color-line"></div>
 <br><br>
 <div style="text-align:center">
 <form action="Controller">
-<INPUT TYPE="hidden" NAME="buttonName" value="button1">
-
-<p>Billing Type</p>
-  
- <div>
+<INPUT TYPE="hidden" NAME="buttonName" value="Search">
+<br><br>
+<div>
+    <b>Billing Type</b>
     <input type="radio" id="billingType1"
      name="billType" value="prepaid">
-    <label for="billingType1">PrepaidType</label>
-
+    <label for="billingType1">Prepaid</label><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="radio" id="billingType2"
      name="billType" value="postpaid">
-    <label for="billingType2">PostpaidType</label>
-  </div>
+    <label for="billingType2">Postpaid</label>
+  </div><br>
   <div>
-  <p>STB Type</p>
+  <b>STB Type</b>
   <select name="stbType">
   <option value="standard">Standard</option>
   <option value="hd">HD</option>
@@ -51,17 +177,10 @@
 </select><br><br>
   </div>
   
- 
-  
-  <div>
- 
-        
-        <INPUT TYPE="submit" VALUE="button1" >
-  
-
-
- 
-  
+  <div class="fancy-button pop-onhover bg-gradient1">
+  <span>
+        <INPUT TYPE="submit" VALUE="Search" >
+	</span>
   </div>
 </form>
 </body>
