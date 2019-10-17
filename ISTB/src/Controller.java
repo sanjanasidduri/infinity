@@ -26,7 +26,6 @@ public class Controller extends HttpServlet {
 		//String billType=request.getParameter("billType");
 		//String stbType=request.getParameter("stbType");
 		//HttpSession session=request.getSession();
-		int cust_id=2;
 		HttpSession session = request.getSession(true);
 		
 		String exe=request.getParameter("buttonName");
@@ -38,12 +37,12 @@ public class Controller extends HttpServlet {
 			String stb_type=request.getParameter("stbType");
 			String bill_type= request.getParameter("billType");
 			System.out.println("entered try block");
-			session.setAttribute("cust_id", cust_id);
+			
 			session.setAttribute("bill_type",  bill_type);
 			session.setAttribute("stb_type",  stb_type);
 			System.out.println("type"+session.getAttribute("bill_type").toString());
-
-			if(sp.check(cust_id)) {
+			int x=Integer.parseInt(session.getAttribute("cust_id").toString());
+			if(sp.check(x)) {
 				System.out.println("if block");
 				List<List<String>> emp_list;
 				
@@ -70,7 +69,7 @@ public class Controller extends HttpServlet {
 					logicbill lg=new logicbill();
 					
 					List<String> al1;
-					al1=lg.bill_inventory(session.getAttribute("stb_type").toString(),session.getAttribute("bill_type").toString(),(Integer)session.getAttribute("cust_id"));
+					al1=lg.bill_inventory(session.getAttribute("stb_type").toString(),session.getAttribute("bill_type").toString(),Integer.parseInt(session.getAttribute("cust_id").toString()));
 					request.setAttribute("al1",al1);
 					getServletContext().getRequestDispatcher("/bill.jsp").forward(request, response);
 				} catch (SQLException e) {
@@ -78,8 +77,37 @@ public class Controller extends HttpServlet {
 					e.printStackTrace();
 				}
 		       }
+		 else if(exe.contentEquals("button3")) {
+			 try {
+					login l1 = new login();
+				    String idd = request.getParameter("Username");
+				    System.out.println(idd);
+					String password = request.getParameter("Password");
+					session.setAttribute("cust_id", idd);
+					boolean exist = l1.loginup(idd,password);
+					if(exist)
+					{
+						getServletContext().getRequestDispatcher("/index.html").forward(request, response);
+						System.out.println("im in login");
+					}
+					else getServletContext().getRequestDispatcher("/Error.jsp").forward(request, response);
+					}
+					
+					 catch (SQLException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					
+				}
+//		 else if(exe.contentEquals("Logout")) {
+//			 System.out.println("Im in logout.");
+//			 getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
+//			 System.out.println("Im in logout second statement .");
+//			 session.invalidate();
+//		 }
+		 }
 				
-			}
+			
 				
 		
 	

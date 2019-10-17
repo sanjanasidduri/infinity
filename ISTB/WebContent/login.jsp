@@ -45,10 +45,10 @@
             </div>
             <div class="hpanel">
                 <div class="panel-body">
-                        <form action="#" id="loginForm">
+                        <form action="Controller" id="loginForm">
                             <div class="form-group">
                                 <label class="control-label" for="username">Username</label>
-                                <input type="text" placeholder="example@gmail.com" title="Please enter you username" required="" value="" name="username" id="username" class="form-control">
+                                <input type="text" placeholder="cust_id" title="Please enter you username" required="" value="" name="Username" id="username" class="form-control">
                                 <span class="help-block small">Your unique username to app</span>
                             </div>
                             <div class="form-group">
@@ -64,9 +64,13 @@
 		<option value="Admin">Admin</option>
 		</select>
 		</div><br>
+		
                             
                            
-                            <button class="btn btn-success btn-block" onclick="myFunction()">Login</button>
+                    
+                            
+                        <INPUT TYPE="hidden" NAME="buttonName" value="button3">
+        				<INPUT TYPE="submit" class="btn btn-success btn-block" VALUE="button3">
                             <a class="btn btn-default btn-block" href="#">Register</a>
                         </form>
                 </div>
