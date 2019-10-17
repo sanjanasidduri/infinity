@@ -28,27 +28,7 @@
 <br><br>
 
 <br><br><br><br><br><br>
-<table width="700px" align="center"
-style="border:1px solid #000000;">
-<tr>
-<td colspan=10 align="center"
-style="background-color:ffeeff">
-<b>BILL</b></td>
-</tr>
-<tr style="background-color:efefef;">
-<td><b>Name</b></td>
-<td><b>STB type</b></td>
-<td><b>STB mac id</b></td>
-<td><b>STB serial number</b></td>
-<td><b>STB price</b></td>
-<td><b>STB installation</b></td>
-<td><b>deposit</b></td>
-<td><b>Discount</b></td>
-<td><b>Tax</b></td>
-<td><b>Amount</b></td>
 
-
-</tr>
 <%
 int count=0;
 String color = "#F9EBB3";
@@ -66,20 +46,7 @@ color = "#F9EBB3";
 count++;
 
 %>
-<tr style="background-color:<%=color%>;">
-<td><%=al1.get(0)%></td>
-<td><%=al1.get(1)%></td>
-<td><%=al1.get(2)%></td>
-<td><%=al1.get(3)%></td>
-<td><%=al1.get(4)%></td>
-<td><%=al1.get(5)%></td>
-<td><%=al1.get(6)%></td>
-<td><%=al1.get(7)%></td>
-<td><%=al1.get(8)%></td>
-<td><%=al1.get(9)%></td>
 
-
-</tr>
 <%
 //}
 
@@ -87,27 +54,40 @@ count++;
 <%
 if(count==0){
 %>
-<tr>
-<td colspan=8 align="center"
-style="background-color:eeffee"><b>No STB available with this retailer</b></td>
-</tr>
+
 <%
 }
 %>
-</table>
-<FORM NAME="form1" action="Controller" METHOD="GET">
+<div class="pricingdiv">
+<ul class="theplan">
+		<li class="title"><span class="icon-trophy" style="color:yellow"></span> <b>STB Bill</b></li>
+		<li><b>Name:</b> <%=al1.get(0)%></li>
+		<li><b>STB type:</b> <%=al1.get(1)%></li>
+		<li><b>STB Mac Id:</b> <%=al1.get(2)%></li>
+		<li><b>STB serial number:</b> <%=al1.get(3)%></li>
+		<li><b>STB price:</b> <%=al1.get(4)%></li>
+		<li><b>STB installation:</b><%=al1.get(5)%></li>
+		<li><b>deposit:</b> <%=al1.get(6)%></span></li>
+		<li><b>Discount:</b> <%=al1.get(7)%></li>
+		<li><b>Tax:</b> <%=al1.get(8)%></li>
+		<li><b>Amount:</b> <%=al1.get(9)%></li><br>
+		<li class="pricebutton">
+		<FORM NAME="form1" action="Controller" METHOD="GET">
         <INPUT TYPE="hidden" NAME="buttonName" value="Checkout">
         <INPUT TYPE="submit" VALUE="Checkout">
         
-       
-    </FORM>
-    
-    <FORM NAME="form2" action="Controller" METHOD="GET">
+       <FORM NAME="form2" action="Controller" METHOD="GET">
        
         
         <INPUT TYPE="hidden" NAME="buttonName" value="back">
         <INPUT TYPE="submit" VALUE="back">
     </FORM>
+    </FORM>
+    </li>
+    </ul>
+    </div>
+    
+    
     
 </body>
 </html>

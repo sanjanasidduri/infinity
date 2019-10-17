@@ -89,7 +89,7 @@ public class Controller extends HttpServlet {
 					boolean exist = l1.loginup(idd,password);
 					if(exist)
 					{
-						getServletContext().getRequestDispatcher("/index.html").forward(request, response);
+						getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
 						System.out.println("im in login");
 					}
 					else getServletContext().getRequestDispatcher("/Error.jsp").forward(request, response);
