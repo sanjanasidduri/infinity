@@ -24,6 +24,30 @@
     <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" /> 
     <link rel="stylesheet" href="styles/style.css">
+    <style type="text/css">
+    	.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #449948;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+    </style>
 	<h3><marquee><strong>Infinity DTH Services</strong></marquee></h3>
 </head>
 <style>
@@ -151,16 +175,31 @@ a:hover, a:focus, a:active {
           filter: blur(10px) brightness(0.95);
   transition: all 0.2s ease-out;
 }
+.box{
+margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 30px;
+  text-align: center;
+}
+
+
+
 </style>
 <body class="blank">
 <div class="color-line"></div>
 <br><br>
-<div style="text-align:center">
-<form action="Controller">
+<div font-size:25px;" class = "box">
+<form action="Controller" style="text-align: center">
 <INPUT TYPE="hidden" NAME="buttonName" value="Search">
 <br><br>
+	<span style="right: -600px; top: -16px; position: relative;">
+        <INPUT TYPE="hidden" NAME="buttonName" value="Logout">
+        <button type="submit" class= "button" VALUE="Logout">Logout</button>
+	</span>
 <div>
     <b>Billing Type</b>
+    
     <input type="radio" id="billingType1"
      name="billType" value="prepaid">
     <label for="billingType1">Prepaid</label><br>
@@ -180,11 +219,13 @@ a:hover, a:focus, a:active {
 </select><br><br>
   </div>
   
-  <div class="fancy-button pop-onhover bg-gradient1">
+  <div>
   <span>
-        <INPUT TYPE="submit" VALUE="Search" >
+        <INPUT TYPE="hidden" NAME="buttonName" value="Search">
+        <button type="submit" class= "button" VALUE="Search">Search</button>
 	</span>
   </div>
 </form>
+</div>
 </body>
 </html>

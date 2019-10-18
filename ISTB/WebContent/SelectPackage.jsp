@@ -63,7 +63,7 @@ function getTotalPrice()
   <div class="pricing-table">
     <h2 class="pricing-table__header">- Default Package -</h2>
     <h3 class="pricing-table__price">$50</h3>
-    <input type="checkbox" name="package" id="package" value="package1"  onclick="getTotalPrice()">
+    <input type="checkbox" name="package" id="package" value="package1"  onclick="getTotalPrice()" checked>
 
 	<a class="pricing-table__button" name="package" id="package" value="package1"  onclick="getTotalPrice()">
       Channels
