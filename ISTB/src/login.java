@@ -19,7 +19,7 @@ public class login {
 		  st1.setInt(1, custid);
 		  st1.setString(2,Password);
 		  ResultSet  rs = st1.executeQuery();
-		 		  if (rs!=null) {
+		 		  if (rs.next()) {
 		 			  return true;
 		 		  }
 		 		  else return false;

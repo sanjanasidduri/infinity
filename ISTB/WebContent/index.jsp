@@ -189,17 +189,20 @@ margin: auto;
 <body class="blank">
 <div class="color-line"></div>
 <br><br>
-<div font-size:25px;" class = "box">
 <form action="Controller" style="text-align: center">
-<INPUT TYPE="hidden" NAME="buttonName" value="Search">
+<div>
 <br><br>
 	<span style="right: -600px; top: -16px; position: relative;">
         <INPUT TYPE="hidden" NAME="buttonName" value="Logout">
         <button type="submit" class= "button" VALUE="Logout">Logout</button>
 	</span>
-<div>
+	
+</div>
+ </form>
+ <div style="font-size:25px;" class = "box">
+<form action="Controller" style="text-align: center"> 
+    <div>
     <b>Billing Type</b>
-    
     <input type="radio" id="billingType1"
      name="billType" value="prepaid">
     <label for="billingType1">Prepaid</label><br>
@@ -208,7 +211,8 @@ margin: auto;
     <input type="radio" id="billingType2"
      name="billType" value="postpaid">
     <label for="billingType2">Postpaid</label>
-  </div><br>
+    </div>
+<br>
   <div>
   <b>STB Type</b>
   <select name="stbType">
@@ -225,7 +229,7 @@ margin: auto;
         <button type="submit" class= "button" VALUE="Search">Search</button>
 	</span>
   </div>
-</form>
-</div>
+  </form>
+  </div>
 </body>
 </html>

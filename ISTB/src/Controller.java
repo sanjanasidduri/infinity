@@ -136,12 +136,12 @@ public class Controller extends HttpServlet {
 			}
 			
 		 }
-//		 else if(exe.contentEquals("Logout")) {
-//			 System.out.println("Im in logout.");
-//			 getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
-//			 System.out.println("Im in logout second statement .");
-//			 session.invalidate();
-//		 }
+		 else if(exe.contentEquals("Logout")) {
+		 System.out.println("Im in logout.");
+		 getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
+		 session.invalidate();
+		 System.out.println("Im in logout second statement .");
+		 }
 		 }
 				
 			

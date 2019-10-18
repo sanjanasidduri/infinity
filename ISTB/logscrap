@@ -10,4 +10,8 @@ INSERT INTO login VALUES (3,'Saloni','customer');
 INSERT INTO login VALUES (4,'Shivani','customer');
 INSERT INTO login VALUES (5,'Sanjana','customer');
 
+insert into login values(6,'Palak','customer');
+
+insert into customer1 values(6,'Palak','Siddur', 'dsadfs@gmail.com','');
+
 select *from login;
