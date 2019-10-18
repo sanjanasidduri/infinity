@@ -71,6 +71,7 @@ public class Controller extends HttpServlet {
 					List<String> al1;
 					al1=lg.bill_inventory(session.getAttribute("stb_type").toString(),session.getAttribute("bill_type").toString(),Integer.parseInt(session.getAttribute("cust_id").toString()));
 					session.setAttribute("cust_name", al1.get(0));
+					session.setAttribute("stb_amt", al1.get(9));
 					System.out.println(session.getAttribute("cust_name").toString());
 					request.setAttribute("al1",al1);
 					getServletContext().getRequestDispatcher("/bill.jsp").forward(request, response);
@@ -104,6 +105,20 @@ public class Controller extends HttpServlet {
 		
 		 else if(exe.contentEquals("Checkout")) {
 			 System.out.println("im in checkout");
+			 Store_stbbill ss= new Store_stbbill();
+			 try {
+				ss.assign_stb(session.getAttribute("stb_type").toString(),session.getAttribute("bill_type").toString(),Integer.parseInt(session.getAttribute("cust_id").toString()));
+			} catch (NumberFormatException | SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			 try {
+				ss.store_bill(Integer.parseInt(session.getAttribute("cust_id").toString()),session.getAttribute("bill_type").toString(),Double.parseDouble(session.getAttribute("stb_amt").toString()));
+			} catch (NumberFormatException | SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+				
 			 getServletContext().getRequestDispatcher("/SelectPackage.jsp").forward(request, response);
 		 }
 		
@@ -119,7 +134,6 @@ public class Controller extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			//sp.packagebill();
 			
 		 }
 //		 else if(exe.contentEquals("Logout")) {
