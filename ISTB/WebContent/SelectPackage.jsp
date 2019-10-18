@@ -126,12 +126,12 @@ function getTotalPrice()
 <table style="text-align:center;">
 <tr>
 <td>
-<b><h1>Total Price </h1> </b></td><td><h1><div id="totalPrice"></div></h1></td></tr>
+<h1>Total Price </h1></td><td><h1><div id="totalPrice"></div></h1></td></tr>
 <tr><td>
-<b>Purchase date </b></td><td><script> document.write(new Date().toLocaleDateString()); </script></td></tr>
+<h1>Purchase date </h1></td><td id="date"><script> document.write(new Date().toLocaleDateString()); </script></td></tr>
 </table>
-</form>
 <INPUT TYPE="hidden" NAME="buttonName" value="Submit">
      <input type="submit" value="Submit">
+</form>    
 </body>
 </html>

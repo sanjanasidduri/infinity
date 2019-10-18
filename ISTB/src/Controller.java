@@ -108,7 +108,19 @@ public class Controller extends HttpServlet {
 		 }
 		
 		 else if(exe.contentEquals("Submit")) {
-			 getServletContext().getRequestDispatcher("/ThankYou.jsp").forward(request, response);
+			String arr[] = request.getParameterValues("package");
+			System.out.println(arr.length);
+			StorePackage sp= new StorePackage();
+			int id=Integer.parseInt(session.getAttribute("cust_id").toString());
+			try {
+				sp.store(arr,id);
+				getServletContext().getRequestDispatcher("/ThankYou.jsp").forward(request, response);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			//sp.packagebill();
+			
 		 }
 //		 else if(exe.contentEquals("Logout")) {
 //			 System.out.println("Im in logout.");

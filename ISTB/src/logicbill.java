@@ -59,6 +59,8 @@ public class logicbill {
 	//	  break;
 	//	 }
 	//	  }
+		  rs1.close();
+		  st.close();
 		  return al1;
 
 		  
